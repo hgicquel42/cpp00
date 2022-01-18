@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 13:50:04 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/18 12:47:44 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/18 13:04:54 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,16 @@ std::string	_timestamp(void)
 }
 
 Account::Account(int initial_deposit): 
-	_accountIndex(Account::_nbAccounts),
-	_amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0)
+	_accountIndex(Account::_nbAccounts++),
+	_amount(initial_deposit), 
+	_nbDeposits(0),
+	_nbWithdrawals(0)
 {
-	Account::_nbAccounts++;
 	Account::_totalAmount += this->_amount;
 	std::cout << _timestamp() << " ";
 	std::cout << "index:" << this->_accountIndex << ";";
-	std::cout << "amount:" << this->_amount << ";created" << "\n";
+	std::cout << "amount:" << this->_amount << ";";
+	std::cout << "created" << "\n";
 }
 
 Account::~Account(void) {
