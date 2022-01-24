@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 18:00:08 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/24 18:50:56 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/24 19:11:59 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,24 @@ void	ft_add(PhoneBook *book)
 	Contact		contact;
 	std::string	line;
 
-	std::cout << "First Name\n";
-	std::getline(std::cin, line);
+	while (std::cout << "First Name\n" && std::getline(std::cin, line) && line.empty())
+		continue ;
 	contact.firstName = line;
 
-	std::cout << "Last Name\n";
-	std::getline(std::cin, line);
+	while (std::cout << "Last Name\n" && std::getline(std::cin, line) && line.empty())
+		continue ;
 	contact.lastName = line;
 
-	std::cout << "Nick Name\n";
-	std::getline(std::cin, line);
+	while (std::cout << "Nick Name\n" && std::getline(std::cin, line) && line.empty())
+		continue ;
 	contact.nickName = line;
 
-	std::cout << "Phone Number\n";
-	std::getline(std::cin, line);
+	while (std::cout << "Phone Number\n" && std::getline(std::cin, line) && line.empty())
+		continue ;
 	contact.phoneNumber = line;
 
-	std::cout << "Darkest Secret\n";
-	std::getline(std::cin, line);
+	while (std::cout << "Darkest Secret\n" && std::getline(std::cin, line) && line.empty())
+		continue ;
 	contact.darkestSecret = line;
 
 	book->list[book->index++ % 8] = contact;
