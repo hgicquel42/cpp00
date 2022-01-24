@@ -6,8 +6,8 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 17:47:34 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/17 12:39:40 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:36:08 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.hpp"
+#include "Contact.hpp"

@@ -6,11 +6,12 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 17:50:13 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/17 12:32:25 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:36:41 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.hpp"
+#pragma once
+#include "Contact.hpp"
 
 class PhoneBook
 {

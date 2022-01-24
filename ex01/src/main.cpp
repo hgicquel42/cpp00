@@ -6,11 +6,13 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 18:00:08 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/17 13:40:45 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/24 17:36:21 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "main.hpp"
+#include <iostream>
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 void	ft_add(PhoneBook *book)
 {
