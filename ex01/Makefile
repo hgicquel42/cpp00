@@ -13,10 +13,10 @@ dst/:
 	mkdir dst/
 
 dst/%.o: src/%.cpp
-	c++ -Wall -Wextra -Werror -g -c $< -o $@
+	c++ -Wall -Wextra -Werror -std=c++98 -g -c $< -o $@
 
 ${NAME}: dst/ ${OUTPUT}
-	c++ -Wall -Wextra -Werror -g ${OUTPUT} -o ${NAME}
+	c++ -Wall -Wextra -Werror -std=c++98 -g ${OUTPUT} -o ${NAME}
 
 clean:
 	rm -rf dst/

@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 18:00:08 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/24 17:36:21 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/24 18:50:56 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,15 +72,30 @@ void	ft_print2(Contact *contact)
 	std::cout << contact->darkestSecret << "\n";
 }
 
+bool	ft_atoi(std::string s, int* r)
+{
+	int	i;
+	int	x;
+
+	x = 0;
+	i = 0;
+	while (s[i] >= '0' && s[i] <= '9')
+		x = (x * 10) + (s[i++] - '0');
+	*r = x;
+	if (!s[i])
+		return (true);
+	return (false);
+}
+
 void	ft_search(PhoneBook *book)
 {
 	int			i;
 	std::string	line;
-
+	
 	i = 0;
-	while (i < 8 && !book->list[i].firstName.empty())
+	while (i < 8)
 	{
-		ft_print(std::to_string(i));
+		std::cout << i;
 		std::cout << " | ";
 		ft_print(book->list[i].firstName);
 		std::cout << " | ";
@@ -90,8 +105,14 @@ void	ft_search(PhoneBook *book)
 		std::cout << "\n";
 		i++;
 	}
-	std::getline(std::cin, line);
-	ft_print2(&book->list[atoi(line.c_str())]);
+	while (std::cout << "#" && std::getline(std::cin, line))
+	{
+		if (ft_atoi(line, &i) && i < 8)
+		{
+			ft_print2(&book->list[i]);
+			break ;
+		}
+	}
 }
 
 int	main()
@@ -100,9 +121,8 @@ int	main()
 	std::string	line;
 
 	book.index = 0;
-	while (true)
+	while (std::cout << ">" && std::getline(std::cin, line))
 	{
-		std::getline(std::cin, line);
 		if (line == "ADD")
 			ft_add(&book);
 		else if (line == "SEARCH")
