@@ -6,7 +6,7 @@
 /*   By: hgicquel <hgicquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 18:00:08 by hgicquel          #+#    #+#             */
-/*   Updated: 2022/01/24 19:11:59 by hgicquel         ###   ########.fr       */
+/*   Updated: 2022/01/25 11:24:26 by hgicquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_print(std::string s)
 	}
 }
 
-void	ft_print2(Contact *contact)
+void	ft_show(Contact *contact)
 {
 	std::cout << contact->firstName << "\n";
 	std::cout << contact->lastName << "\n";
@@ -109,7 +109,7 @@ void	ft_search(PhoneBook *book)
 	{
 		if (ft_atoi(line, &i) && i < 8)
 		{
-			ft_print2(&book->list[i]);
+			ft_show(&book->list[i]);
 			break ;
 		}
 	}
